@@ -4,5 +4,6 @@ accelerate
 transformers==4.42.4
 sentencepiece
 git+https://github.com/Gothos/diffusers.git@flux-inpaint
+protobuf
 flux
 flask_cors
