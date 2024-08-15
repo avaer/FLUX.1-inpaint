@@ -64,8 +64,9 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 #     ]
 # ]
 
-pipe = FluxInpaintPipeline.from_pretrained(
-    "black-forest-labs/FLUX.1-dev", torch_dtype=torch.bfloat16).to(DEVICE)
+# MODEL_PATH = "black-forest-labs/FLUX.1-dev"
+MODEL_PATH = "/FLUX.1-dev"
+pipe = FluxInpaintPipeline.from_pretrained(MODEL_PATH, torch_dtype=torch.bfloat16).to(DEVICE)
 
 
 def resize_image_dimensions(
