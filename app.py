@@ -187,7 +187,7 @@ def dino():
             quality = int(quality_string)
         lossless = False
         if lossless_string:
-            lossless = bool(lossless)
+            lossless = True
         
         generator = torch.Generator().manual_seed(seed_slicer)
         result = pipe(
