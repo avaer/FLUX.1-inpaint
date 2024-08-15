@@ -144,7 +144,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-# res = await fetch(`http://127.0.0.1:1234/images/image (967).png`); b = await res.blob(); fd = new FormData(); fd.append('image', b); fd.append('query', JSON.stringify(['plant'])); res = await fetch('/dino', { method: 'POST', body: fd, }); j = await res.json();
+# res = await fetch(`http://127.0.0.1:1234/images/image (967).png`); b = await res.blob(); fd = new FormData(); fd.append('image', b); fd.append('prompt', 'anime background'); res = await fetch('/flux-inpaint', { method: 'POST', body: fd, }); j = await res.json();
 
 @app.route('/flux-inpaint', methods=['POST'])
 def dino():
